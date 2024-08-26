@@ -78,7 +78,6 @@ jobs:
         run: |
           minikube start --driver=podman \
           --network-plugin=cni \
-          --container-runtime=rkt \
           --iso-url=https://github.com/coreos/minikube-iso/releases/download/v0.0.5/minikube-v0.0.5.iso
       
       - name: Set up kubectl
