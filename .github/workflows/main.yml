@@ -73,7 +73,11 @@ jobs:
         uses: azure/setup-kubectl@v3
         with:
           version: 'latest'
-
+      
+      - name: Verify Kubernetes Cluster
+        run: kubectl cluster-info
+      
       - name: Apply Kubernetes deployment
         run: |
           kubectl apply -f k8s/deployment.yaml --validate=false
+
