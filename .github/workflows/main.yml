@@ -45,7 +45,7 @@ jobs:
         run: |
           npx sonar-scanner \
             -Dsonar.projectKey=OelSawy_myapp \
-            -Dsonar.organization="Omar Abdelwahab" \
+            -Dsonar.organization=MyOrganization \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
