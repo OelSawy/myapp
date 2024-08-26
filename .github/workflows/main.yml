@@ -44,8 +44,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonar-scanner \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dproject.settings=config/sonar-cloud.properties
+            -Dsonar.projectKey=OelSawy_myapp \
+            -Dsonar.organization=oelsawy \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
 
   build:
     name: Build Docker Image
